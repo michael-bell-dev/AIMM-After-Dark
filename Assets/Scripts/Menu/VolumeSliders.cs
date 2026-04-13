@@ -11,7 +11,7 @@ public class VolumeSliders : MonoBehaviour
 
     void Start()
     {
-        music.volume = 0.7f * PlayerPrefs.GetFloat("musicVolume", 1f);
+        music.volume = 0.6f * PlayerPrefs.GetFloat("musicVolume", 1f);
         click.volume = 0.5f * PlayerPrefs.GetFloat("sfxVolume", 1f);
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume", 1f);
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume", 1f);
@@ -19,7 +19,7 @@ public class VolumeSliders : MonoBehaviour
         musicSlider.onValueChanged.AddListener(value =>
         {
             PlayerPrefs.SetFloat("musicVolume", value);
-            music.volume = 0.7f * value;
+            music.volume = 0.6f * value;
             click.Play();
         });
 
